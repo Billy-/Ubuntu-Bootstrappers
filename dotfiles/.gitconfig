@@ -1,0 +1,8 @@
+[alias]
+	st = status
+	co = checkout
+	fa = fetch --all
+	cdiff = diff --cached
+[user]
+	email = billy@billym.co.uk
+	name = Billy-
