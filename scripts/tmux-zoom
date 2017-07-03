@@ -1,17 +1,18 @@
 #!/bin/bash
 
-if [[ `tmux show-options -gv mouse` == "on" ]]
+if [[ `tmux show-options -v mouse` != "off" ]]
 then
         tmux new-window -d -n tmux-zoom 'clear && echo TMUX_ZOOM && read'
         tmux swap-pane -s tmux-zoom.0
         tmux select-window -t tmux-zoom
-        tmux set-option -g mouse off
+        tmux set-window-option mouse off
         tmux display-message "Mouse off"
 else
         tmux last-window
         tmux swap-pane -s tmux-zoom.0
         tmux kill-window -t tmux-zoom
-        tmux set-option -g mouse on
+        tmux set-window-option mouse on
         tmux display-message "Mouse on"
 fi
 exit 0
+
