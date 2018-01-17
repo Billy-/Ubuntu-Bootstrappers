@@ -52,9 +52,6 @@ fzf-cmd-widget () {
 zle -N fzf-cmd-widget
 bindkey '^A' fzf-cmd-widget
 
-
-alias new-component="node ~/projects/new-component/index.js"
-
 globalias() {
    if [[ $LBUFFER =~ ' [A-Z0-9]+$' ]]; then
      zle _expand_alias
