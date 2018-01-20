@@ -14,7 +14,7 @@ bash -c ". ~/.nvm/nvm.sh && nvm install node"
 bash -c ". ~/.nvm/nvm.sh && npm i -g yarn"
 # Install fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
+~/.fzf/install --all
 
 echo "Making ZSH default Shell..."
 sudo chsh -s `which zsh`
