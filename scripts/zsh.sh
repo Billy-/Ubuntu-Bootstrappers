@@ -20,10 +20,10 @@ echo "Making ZSH default Shell..."
 sudo chsh -s `which zsh`
 
 echo "Copying .zshrc..."
-cp "../dotfiles/.zshrc" ~/.zshrc
+cp "$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/../dotfiles/.zshrc" ~/.zshrc
 
 echo "Copying .tmux.conf"
-cp "../dotfiles/.tmux.conf" ~/.tmux.conf
+cp "$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/../dotfiles/.tmux.conf" ~/.tmux.conf
 
 echo "Done!"
 echo "Launching ZSH"
