@@ -42,15 +42,27 @@ export FZF_DEFAULT_OPTS='
   --color=fg:#839496,header:#586e75,info:#1e90ff,pointer:#719e07
   --color=marker:#719e07,fg+:#839496,prompt:#719e07,hl+:#719e07
 '
+
+__asel() {
+  local cmd="compgen -a"
+  setopt localoptions pipefail 2> /dev/null
+  eval "$cmd" | FZF_DEFAULT_OPTS="--height ${FZF_TMUX_HEIGHT:-40%} --reverse $FZF_DEFAULT_OPTS $FZF_CTRL_T_OPTS" $(__fzfcmd) -m "$@" | while read item; do
+    echo -n "${(q)item} "
+  done
+  local ret=$?
+  echo
+  return $ret
+}
+
 fzf-cmd-widget () {
-  LBUFFER="${LBUFFER}$(compgen -a | fzf-tmux)"
+  LBUFFER="${LBUFFER}$(__asel)"
   local ret=$?
   zle redisplay
   typeset -f zle-line-init >/dev/null && zle zle-line-init
   return $ret
 }
-zle -N fzf-cmd-widget
-bindkey '^A' fzf-cmd-widget
+zle	-N fzf-cmd-widget
+bindkey	'^A' fzf-cmd-widget
 
 globalias() {
    if [[ $LBUFFER =~ ' [A-Z0-9]+$' ]]; then
