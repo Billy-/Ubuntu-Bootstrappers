@@ -22,6 +22,9 @@ sudo chsh -s `which zsh`
 echo "Copying .zshrc..."
 cp "../dotfiles/.zshrc" ~/.zshrc
 
+echo "Copying .tmux.conf"
+cp "../dotfiles/.tmux.conf" ~/.tmux.conf
+
 echo "Done!"
 echo "Launching ZSH"
 
