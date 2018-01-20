@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "Install ZSH & dependencies..."
 # Install git, zsh, fortune, cowsay, howdoi
-sudo apt-get install zsh git fortune cowsay howdoi
+sudo apt-get install zsh git fortune cowsay howdoi lolcat
 # Install oh-my-zsh
 wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
 # Install tmux
