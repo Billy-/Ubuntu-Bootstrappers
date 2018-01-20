@@ -28,4 +28,4 @@ cp "../dotfiles/.tmux.conf" ~/.tmux.conf
 echo "Done!"
 echo "Launching ZSH"
 
-#zsh
+zsh
