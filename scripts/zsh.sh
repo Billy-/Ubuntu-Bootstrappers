@@ -10,6 +10,16 @@ wget https://gist.githubusercontent.com/Billy-/b99ac62003e9db8617f3ce969368ce2a/
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install --all
 
+# Install exa
+if [[ -z "$(which exa)" ]]; then
+  echo "Installing exa..."
+  wget -nc https://github.com/ogham/exa/releases/download/v0.8.0/exa-linux-x86_64-0.8.0.zip
+  unzip exa-linux-x86_64-0.8.0.zip
+  mv exa-linux-x86_64 /usr/ocal/bin/exa
+  rm exa-linux-x86_64-0.8.0.zip
+else  echo "exa found..."
+fi
+
 echo "Making ZSH default Shell..."
 sudo chsh -s `which zsh`
 
