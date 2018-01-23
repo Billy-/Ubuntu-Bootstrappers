@@ -29,7 +29,7 @@ if [[ -z "$(which exa)" ]]; then
   echo "Installing exa..."
   wget -nc https://github.com/ogham/exa/releases/download/v0.8.0/exa-linux-x86_64-0.8.0.zip
   unzip exa-linux-x86_64-0.8.0.zip
-  mv exa-linux-x86_64 /usr/ocal/bin/exa
+  sudo mv exa-linux-x86_64 /usr/local/bin/exa
   rm exa-linux-x86_64-0.8.0.zip
 else  echo "exa found..."
 fi
