@@ -35,6 +35,9 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 echo "Copying .zshrc..."
 cp "$DIR/../dotfiles/.zshrc" ~/.zshrc
 
+echo "copying .zsh_aliases..."
+cp "$DIR/../dotfiles/.zsh_aliases" ~/.zsh_aliases
+
 echo "Copying .tmux.conf"
 cp "$DIR/../dotfiles/.tmux.conf" ~/.tmux.conf
 
