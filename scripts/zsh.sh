@@ -44,6 +44,13 @@ else
   echo "Theme directory found..."
 fi
 
+if [[ ! -d "$ZSH/custom/plugins/alias-tips" ]]; then
+  echo "Installing alias-tips plugin..."
+  git clone https://github.com/djui/alias-tips.git $ZSH/custom/plugins/alias-tips || true
+else
+  echo "alias-tips pluign found..."
+fi
+
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 echo "Copying .zshrc..."

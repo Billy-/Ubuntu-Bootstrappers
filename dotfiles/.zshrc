@@ -28,7 +28,7 @@ setopt interactivecomments
 ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_MODE='nerdfont-complete'
 
-plugins=(catimg chucknorris colored-man-pages colorize common-aliases docker docker-compose emoji git heroku httpie jira json-tools lol man nyan react-native sudo tmux ubuntu yarn z zsh_reload zsh-syntax-highlighting)
+plugins=(alias-tips catimg chucknorris colored-man-pages colorize common-aliases docker docker-compose emoji git heroku httpie jira json-tools lol man nyan react-native sudo tmux ubuntu yarn z zsh_reload zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
