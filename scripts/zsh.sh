@@ -20,12 +20,13 @@ else
   echo "Theme directory found..."
 fi
 
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 echo "Copying .zshrc..."
-cp "$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/../dotfiles/.zshrc" ~/.zshrc
+cp "$DIR/../dotfiles/.zshrc" ~/.zshrc
 
 echo "Copying .tmux.conf"
-cp "$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/../dotfiles/.tmux.conf" ~/.tmux.conf
+cp "$DIR/../dotfiles/.tmux.conf" ~/.tmux.conf
 
 echo "Done!"
 echo "Launching ZSH"
