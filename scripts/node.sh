@@ -1,3 +1,5 @@
+#!/bin/bash
+
 if [[ -z $NVM_DIR ]]; then
   # Install nvm
   echo "Installing nvm..."
