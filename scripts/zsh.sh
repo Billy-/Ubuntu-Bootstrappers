@@ -1,14 +1,28 @@
 #!/bin/bash
-echo "Install ZSH & dependencies..."
-# Install git, zsh, fortune, cowsay, howdoi
-sudo apt-get install zsh git fortune cowsay howdoi lolcat
+
+# Install git, zsh, fortune-mod, cowsay, lolcat
+echo "Installing dependencies..."
+sudo apt-get install git zsh fortune cowsay lolcat
+
 # Install oh-my-zsh
-wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
+if [[ -z "$(echo $ZSH | grep "oh-my-zsh")" ]]; then
+  echo "Installing oh-my-zsh..."
+  wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
+else
+  echo "oh-my-zsh found..."
+fi
+
 # Install tmux
-wget https://gist.githubusercontent.com/Billy-/b99ac62003e9db8617f3ce969368ce2a/raw/7f22dae6b8a2223c1026e4f0ef5d030b029c7493/tmux_build_from_source_Ubuntu.sh -O - | zsh
+# wget https://gist.githubusercontent.com/Billy-/b99ac62003e9db8617f3ce969368ce2a/raw/7f22dae6b8a2223c1026e4f0ef5d030b029c7493/tmux_build_from_source_Ubuntu.sh -O - | zsh
+
 # Install fzf
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install --all
+if [[ -z "$(which fzf)" ]]; then
+  echo "Installing fzf..."
+  git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+  ~/.fzf/install --all
+else
+  echo "fzf found..."
+fi
 
 # Install exa
 if [[ -z "$(which exa)" ]]; then
