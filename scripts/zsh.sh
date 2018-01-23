@@ -3,7 +3,7 @@
 # Install git, zsh, fortune-mod, cowsay, lolcat
 echo "Installing dependencies..."
 sudo apt-get update
-sudo apt-get install git zsh fortune cowsay lolcat python build-essential
+sudo apt-get install git zsh fortune cowsay lolcat python python-pip build-essential
 
 # Install oh-my-zsh
 if [[ -z "$(echo $ZSH | grep "oh-my-zsh")" ]]; then
@@ -34,6 +34,9 @@ if [[ -z "$(which exa)" ]]; then
   rm exa-linux-x86_64-0.8.0.zip
 else  echo "exa found..."
 fi
+
+# Install howdoi
+pip install howdoi
 
 echo "Making ZSH default Shell..."
 sudo chsh -s `which zsh`
