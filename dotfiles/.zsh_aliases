@@ -6,7 +6,8 @@ alias dcu='docker-compose up'
 alias dcub='docker-compose up --build'
 alias nuke='rac; rai; rav'
 
-alias l="exa -lahg --git --time-style=long-iso --group-directories-first --colour-scale"
+alias l="exa -lhg --git --time-style=long-iso --group-directories-first --colour-scale"
 alias ll="l"
-alias la="l"
-alias ld="exa -lahg --git --time-style=long-iso --group-directories-first --colour-scale -T -L=2 -I='node_modules|.git'"
+alias la="exa -lahg --git --time-style=long-iso --group-directories-first --colour-scale"
+alias ld="exa -lhg --git --time-style=long-iso --group-directories-first --colour-scale -T -L=2 -I='node_modules|.git'"
+alias lda="exa -lahg --git --time-style=long-iso --group-directories-first --colour-scale -T -L=2 -I='node_modules|.git'"
