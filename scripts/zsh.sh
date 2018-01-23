@@ -13,6 +13,14 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 echo "Making ZSH default Shell..."
 sudo chsh -s `which zsh`
 
+if [[ ! -d "$ZSH/custom/themes/powerlevel9k" ]]; then
+  echo "Cloning theme..."
+  git clone https://github.com/bhilburn/powerlevel9k.git $ZSH/custom/themes/powerlevel9k || true
+else
+  echo "Theme directory found..."
+fi
+
+
 echo "Copying .zshrc..."
 cp "$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/../dotfiles/.zshrc" ~/.zshrc
 

@@ -25,7 +25,7 @@ DEFAULT_USER=`whoami`
 setopt CORRECT
 setopt interactivecomments
 
-ZSH_THEME="agnoster"
+ZSH_THEME="powerlevel9k/powerlevel9k"
 
 plugins=(catimg chucknorris colored-man-pages colorize common-aliases docker docker-compose emoji git heroku httpie jira json-tools lol man nyan react-native sudo tmux ubuntu yarn z zsh_reload zsh-syntax-highlighting)
 
