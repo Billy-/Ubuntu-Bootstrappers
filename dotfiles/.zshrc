@@ -22,6 +22,7 @@ export EDITOR=nano
 
 DEFAULT_USER=`whoami`
 
+DISABLE_AUTO_TITLE=true
 setopt CORRECT
 setopt interactivecomments
 
