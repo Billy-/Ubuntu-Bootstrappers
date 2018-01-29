@@ -28,7 +28,7 @@ setopt interactivecomments
 
 ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_MODE='nerdfont-complete'
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
 POWERLEVEL9K_SHORTEN_STRATEGY='truncate_with_package_name'
 
 plugins=(alias-tips catimg chucknorris colored-man-pages colorize common-aliases docker docker-compose emoji git heroku httpie jira json-tools lol man nyan react-native sudo tmux ubuntu yarn z zsh_reload zsh-syntax-highlighting)
