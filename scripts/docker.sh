@@ -1,36 +1,36 @@
 #!/bin/bash
 
-apt-get update
-apt-get install -y --no-install-recommends \
-    linux-image-extra-$(uname -r) \
-    linux-image-extra-virtual \
+sudo apt-get update -y
+sudo apt-get install -y \
     apt-transport-https \
     ca-certificates \
     curl \
     software-properties-common
 
-curl -fsSL https://apt.dockerproject.org/gpg | sudo apt-key add -
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 
-add-apt-repository \
-       "deb https://apt.dockerproject.org/repo/ \
-       ubuntu-$(lsb_release -cs) \
-       main"
+sudo apt-key fingerprint 0EBFCD88
 
-apt-get update
-apt-get install -y docker-engine
+sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+
+sudo apt-get update -y
+sudo apt-get install -y docker-ce
 
 usermod -aG docker $SUDO_USER
 echo "Verifying Docker installation..."
 systemctl status docker | grep running
 
 echo "Installing docker-compose..."
-curl -L https://github.com/docker/compose/releases/download/1.11.1/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
-chmod +x /usr/local/bin/docker-compose
+sudo sh -c "sudo curl -L https://github.com/docker/compose/releases/download/1.19.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose"
+sudo chmod +x /usr/local/bin/docker-compose
 echo "Verifying docker-compose installation..."
 docker-compose --version
 
 echo "Installing Bash command completion..."
-curl -L https://raw.githubusercontent.com/docker/compose/$(docker-compose version --short)/contrib/completion/bash/docker-compose -o /etc/bash_completion.d/docker-compose
+sudo sh -c "curl -L https://raw.githubusercontent.com/docker/compose/$(docker-compose version --short)/contrib/completion/bash/docker-compose -o /etc/bash_completion.d/docker-compose"
 
 echo "Done!"
 
