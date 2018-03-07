@@ -14,7 +14,12 @@ else
 fi
 
 # Install tmux
-# wget https://gist.githubusercontent.com/Billy-/b99ac62003e9db8617f3ce969368ce2a/raw/7f22dae6b8a2223c1026e4f0ef5d030b029c7493/tmux_build_from_source_Ubuntu.sh -O - | zsh
+if [[ -z "$(which tmux)" ]]; then
+  echo "Installing tmux..."
+  wget https://gist.githubusercontent.com/Billy-/b99ac62003e9db8617f3ce969368ce2a/raw/7f22dae6b8a2223c1026e4f0ef5d030b029c7493/tmux_build_from_source_Ubuntu.sh -O - | zsh
+else
+  echo "tmux found..."
+fi
 
 # Install fzf
 if [[ -z "$(which fzf)" ]]; then
@@ -41,18 +46,18 @@ pip install howdoi
 echo "Making ZSH default Shell..."
 sudo chsh -s `which zsh`
 
-if [[ ! -d "$ZSH/custom/themes/powerlevel9k" ]]; then
+if [[ -d "$(echo $ZSH/custom/themes/powerlevel9k)" ]]; then
+  echo "Theme directory found..."
+else
   echo "Cloning theme..."
   git clone https://github.com/bhilburn/powerlevel9k.git $ZSH/custom/themes/powerlevel9k || true
-else
-  echo "Theme directory found..."
 fi
 
-if [[ ! -d "$ZSH/custom/plugins/alias-tips" ]]; then
+if [[ -d "$(echo $ZSH/custom/plugins/alias-tips)" ]]; then
+  echo "alias-tips pluign found..."
+else
   echo "Installing alias-tips plugin..."
   git clone https://github.com/djui/alias-tips.git $ZSH/custom/plugins/alias-tips || true
-else
-  echo "alias-tips pluign found..."
 fi
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
