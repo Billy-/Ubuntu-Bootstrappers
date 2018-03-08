@@ -19,7 +19,7 @@ sudo add-apt-repository \
 sudo apt-get update -y
 sudo apt-get install -y docker-ce
 
-usermod -aG docker $SUDO_USER
+sudo usermod -aG docker $SUDO_USER
 echo "Verifying Docker installation..."
 systemctl status docker | grep running
 
