@@ -41,7 +41,11 @@ else  echo "exa found..."
 fi
 
 # Install howdoi
-pip install howdoi
+git clone https://github.com/gleitz/howdoi.git
+cd howdoi
+sudo python ./setup.py install
+cd ..
+rm -rf ./howdoi
 
 echo "Making ZSH default Shell..."
 sudo chsh -s `which zsh`
