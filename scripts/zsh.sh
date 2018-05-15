@@ -3,7 +3,7 @@
 # Install git, zsh, fortune-mod, cowsay, lolcat
 echo "Installing dependencies..."
 sudo apt-get update
-sudo apt-get install git zsh fortune cowsay lolcat python python-pip build-essential
+sudo apt-get install git zsh fortune cowsay lolcat python python-pip build-essential jq
 
 # Install oh-my-zsh
 if [[ -d "~/.oh-my-zsh" ]]; then
