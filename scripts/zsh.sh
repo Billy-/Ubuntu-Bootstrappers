@@ -41,11 +41,14 @@ else  echo "exa found..."
 fi
 
 # Install howdoi
-git clone https://github.com/gleitz/howdoi.git
-cd howdoi
-sudo python ./setup.py install
-cd ..
-rm -rf ./howdoi
+if [[ -z "$(which howdoi)" ]]; then
+  git clone https://github.com/gleitz/howdoi.git
+  cd howdoi
+  sudo python ./setup.py install
+  cd ..
+  sudo rm -rf ./howdoi
+else  echo "howdoi found..."
+fi
 
 echo "Making ZSH default Shell..."
 sudo chsh -s `which zsh`
