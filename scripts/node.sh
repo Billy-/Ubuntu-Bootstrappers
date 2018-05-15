@@ -19,7 +19,9 @@ fi
 if [[ -z "$(which yarn)" ]]; then
   # Install yarn
   echo "Installing yarn..."
-  bash -c ". ~/.nvm/nvm.sh && npm i -g yarn"
+  curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+  echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+  sudo apt-get update && sudo apt-get install yarn
 else
   echo "Yarn found...."
   echo "Nice!"
