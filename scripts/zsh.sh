@@ -54,14 +54,14 @@ if [[ -d "~/.oh-my-zsh/custom/themes/powerlevel9k)" ]]; then
   echo "Theme directory found..."
 else
   echo "Cloning theme..."
-  sudo git clone https://github.com/bhilburn/powerlevel9k.git $ZSH/custom/themes/powerlevel9k || true
+  sudo git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k || true
 fi
 
 if [[ -d "~/.oh-my-zsh/custom/plugins/alias-tips)" ]]; then
   echo "alias-tips pluign found..."
 else
   echo "Installing alias-tips plugin..."
-  sudo git clone https://github.com/djui/alias-tips.git $ZSH/custom/plugins/alias-tips || true
+  sudo git clone https://github.com/djui/alias-tips.git ~/.oh-my-zsh/custom/plugins/alias-tips || true
 fi
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
