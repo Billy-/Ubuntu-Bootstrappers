@@ -24,7 +24,9 @@ echo "Verifying Docker installation..."
 systemctl status docker | grep running
 
 echo "Installing docker-compose..."
-sudo sh -c "sudo curl -L https://github.com/docker/compose/releases/download/1.19.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose"
+LATEST_COMPOSE_VERSION=$(curl --silent "https://api.github.com/repos/docker/compose/releases/latest" | grep -Po '"tag_name": "\K.*?(?=")')
+echo Latest compose version is $LATEST_COMPOSE_VERSION
+sudo sh -c "sudo curl -L https://github.com/docker/compose/releases/download/$LATEST_COMPOSE_VERSION/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose"
 sudo chmod +x /usr/local/bin/docker-compose
 echo "Verifying docker-compose installation..."
 docker-compose --version
