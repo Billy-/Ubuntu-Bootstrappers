@@ -67,6 +67,14 @@ else
   sudo git clone https://github.com/djui/alias-tips.git ~/.oh-my-zsh/custom/plugins/alias-tips || true
 fi
 
+
+if [[ -d "~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting)" ]]; then
+  echo "zsh-syntax-highlighting pluign found..."
+else
+  echo "Installing zsh-syntax-highlighting plugin..."
+  sudo git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+fi
+
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 echo "Copying .zshrc..."
