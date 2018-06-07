@@ -11,3 +11,16 @@ alias ll="l"
 alias la="exa -lahg --git --time-style=long-iso --group-directories-first --colour-scale"
 alias ld="exa -lhg --git --time-style=long-iso --group-directories-first --colour-scale -T -L=2 -I='node_modules|.git'"
 alias lda="exa -lahg --git --time-style=long-iso --group-directories-first --colour-scale -T -L=2 -I='node_modules|.git'"
+
+function _swarm-alias() {
+  if [ ! -d $1 ]; then
+    echo "Swarm directory '$1' not found" >&2
+    echo "exit 1"
+  else 
+    echo "DOCKER_CERT_PATH=$1 DOCKER_HOST=\$(cat $1/host) DOCKER_TLS_VERIFY=1 docker"
+  fi
+}
+ 
+for d in $(find ~/.swarms -mindepth 1 -maxdepth 1 -type d); do
+        alias "swarm-$(basename $d)=$(_swarm-alias $d)"
+done
