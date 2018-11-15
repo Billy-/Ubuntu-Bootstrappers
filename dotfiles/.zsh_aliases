@@ -24,3 +24,9 @@ function _swarm-alias() {
 for d in $(find ~/.swarms -mindepth 1 -maxdepth 1 -type d); do
         alias "swarm-$(basename $d)=$(_swarm-alias $d)"
 done
+
+# shorthand for jq-ing package.jsons
+alias jqpkg='cat package.json | jq '
+
+# git stage all deleted files
+alias grma='git rm $(git ls-files --deleted)'
