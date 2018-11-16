@@ -6,7 +6,7 @@ sudo apt-get update
 sudo apt-get install git zsh fortune cowsay lolcat python python-pip build-essential jq
 
 # Install oh-my-zsh
-if [[ -d "~/.oh-my-zsh" ]]; then
+if [[ -d ~/.oh-my-zsh ]]; then
   echo "oh-my-zsh found..."
 else
   echo "Installing oh-my-zsh..."
