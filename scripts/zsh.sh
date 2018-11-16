@@ -53,26 +53,25 @@ fi
 echo "Making ZSH default Shell..."
 sudo chsh -s `which zsh`
 
-if [[ -d "~/.oh-my-zsh/custom/themes/powerlevel9k)" ]]; then
-  echo "Theme directory found..."
+if [[ -d ~/.oh-my-zsh/custom/themes/powerlevel9k ]]; then
+  echo "powerlevel9k theme found..."
 else
   echo "Cloning theme..."
-  sudo git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k || true
+  sudo git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 fi
 
-if [[ -d "~/.oh-my-zsh/custom/plugins/alias-tips)" ]]; then
-  echo "alias-tips pluign found..."
+if [[ -d ~/.oh-my-zsh/custom/plugins/alias-tips ]]; then
+  echo "alias-tips plugin found..."
 else
   echo "Installing alias-tips plugin..."
-  sudo git clone https://github.com/djui/alias-tips.git ~/.oh-my-zsh/custom/plugins/alias-tips || true
+  sudo git clone https://github.com/djui/alias-tips.git ~/.oh-my-zsh/custom/plugins/alias-tips
 fi
 
-
-if [[ -d "~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting)" ]]; then
-  echo "zsh-syntax-highlighting pluign found..."
+if [[ -d ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting ]]; then
+  echo "zsh-syntax-highlighting plugin found..."
 else
   echo "Installing zsh-syntax-highlighting plugin..."
-  sudo git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+  sudo git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 fi
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
