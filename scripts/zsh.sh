@@ -70,14 +70,14 @@ fi
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-echo "Copying .zshrc..."
-cp "$DIR/../dotfiles/.zshrc" ~/.zshrc
-
-echo "copying .zsh_aliases..."
-cp "$DIR/../dotfiles/.zsh_aliases" ~/.zsh_aliases
-
-echo "Copying .tmux.conf"
-cp "$DIR/../dotfiles/.tmux.conf" ~/.tmux.conf
+for file in .zshrc .zsh_aliases .tmux.conf; do
+  if [[ -e ~/$file ]]; then
+    echo "~/$file found, backing up to ~/$file.bkp"
+    cp ~/$file ~/$file.bkp
+  fi
+  echo "Copying $file..."
+  cp "$DIR/../dotfiles/$file" ~/$file
+done
 
 echo "Done!"
 echo "Launching ZSH"
