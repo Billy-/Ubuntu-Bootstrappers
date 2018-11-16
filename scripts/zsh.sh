@@ -79,7 +79,13 @@ for file in .zshrc .zsh_aliases .tmux.conf; do
   cp "$DIR/../dotfiles/$file" ~/$file
 done
 
+echo
 echo "Done!"
-echo "Launching ZSH"
 
-zsh
+echo
+read -p "Launch zsh now? (Y/n) " -n 1 -r
+echo
+if [[ ! $REPLY =~ ^[Nn]$ ]]
+then
+  zsh
+fi
