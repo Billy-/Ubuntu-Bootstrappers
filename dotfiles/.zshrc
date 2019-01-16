@@ -35,7 +35,7 @@ plugins=(alias-tips catimg chucknorris colored-man-pages colorize common-aliases
 
 source $ZSH/oh-my-zsh.sh
 
-alias tmuxconf="nano ~/.tmux.conf"
+alias tmuxconf="editor ~/.tmux.conf"
 
 export PATH="$PATH:`yarn global bin`:$HOME/.config/yarn/global/node_modules/.bin"
 
