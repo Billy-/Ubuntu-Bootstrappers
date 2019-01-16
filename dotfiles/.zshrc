@@ -31,7 +31,7 @@ POWERLEVEL9K_MODE='nerdfont-complete'
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
 POWERLEVEL9K_SHORTEN_STRATEGY='truncate_with_package_name'
 
-plugins=(alias-tips catimg chucknorris colored-man-pages colorize common-aliases docker docker-compose emoji git heroku httpie jira json-tools lol man react-native sudo tmux ubuntu yarn z zsh_reload zsh-syntax-highlighting)
+plugins=(alias-tips catimg chucknorris colored-man-pages colorize common-aliases docker docker-compose emoji git heroku httpie jira json-tools lol man nyan react-native sudo tmux ubuntu yarn z zsh_reload zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
