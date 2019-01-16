@@ -27,6 +27,15 @@ else
   ~/.fzf/install --all
 fi
 
+# Install ripgrep
+if [[ ! -z $(which ripgrep) ]]; then echo "ripgrep found..."
+else
+  echo "Installing ripgrep..."
+  curl -LO https://github.com/BurntSushi/ripgrep/releases/download/0.10.0/ripgrep_0.10.0_amd64.deb
+  sudo dpkg -i ripgrep_0.10.0_amd64.deb
+  rm -f ripgrep_0.10.0_amd64.deb
+fi
+
 # Install exa
 if [[ ! -z $(which exa) ]]; then echo "exa found..."
 else
