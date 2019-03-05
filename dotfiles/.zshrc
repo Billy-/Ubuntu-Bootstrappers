@@ -18,7 +18,7 @@ export NVM_DIR="$HOME/.nvm"
 export ZSH=$HOME/.oh-my-zsh
 export TERM="screen-256color"
 export BROWSER=chrome
-export EDITOR=nano
+export EDITOR=vim
 
 DEFAULT_USER=`whoami`
 
