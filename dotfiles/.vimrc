@@ -79,3 +79,5 @@ map <C-h> :History <CR>
 
 nnoremap <silent> <C-n> :set relativenumber!<cr>
 
+map <C-_> <plug>NERDCommenterToggle<CR>
+
