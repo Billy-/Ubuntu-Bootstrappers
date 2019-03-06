@@ -24,6 +24,7 @@ Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'itchyny/lightline.vim'
 Plug 'wesQ3/vim-windowswap'
 Plug 'chrisbra/NrrwRgn'
+Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ajh17/Spacegray.vim', { 'as': 'spacegray' }
