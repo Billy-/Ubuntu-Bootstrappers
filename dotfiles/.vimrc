@@ -77,3 +77,5 @@ map <C-o> :NERDTreeToggle %<CR>
 map <C-f> :Files <CR>
 map <C-h> :History <CR>
 
+nnoremap <silent> <C-n> :set relativenumber!<cr>
+
