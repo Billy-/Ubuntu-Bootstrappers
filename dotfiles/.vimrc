@@ -31,6 +31,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ajh17/Spacegray.vim', { 'as': 'spacegray' }
 Plug '~/.fzf', { 'as': 'fzf' }
 Plug 'junegunn/fzf.vim'
+Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
