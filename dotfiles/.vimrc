@@ -72,6 +72,8 @@ let g:lightline = {
 
 " mouse mode  on
 :set mouse=a
+" makes dragging with mouse work
+set ttymouse=sgr
 
 let delimitMate_expand_cr = 1
 let delimitMate_expand_space = 1
