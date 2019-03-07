@@ -80,6 +80,7 @@ let delimitMate_expand_space = 1
 let delimitMate_balance_matchpairs = 1
 
 map <C-o> :NERDTreeToggle %<CR>
+map <C-a> :NERDTreeToggle .<CR>
 map <C-f> :Files <CR>
 map <C-h> :History <CR>
 
