@@ -37,6 +37,8 @@ call plug#end()
 
 color spacegray
 
+:set autoread
+
 :set number relativenumber
 
 let g:javascript_plugin_jsdoc = 1
