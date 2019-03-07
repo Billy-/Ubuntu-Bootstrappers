@@ -84,3 +84,5 @@ map <C-_> <plug>NERDCommenterToggle<CR>
 map <leader>s :update<CR>
 map <leader>z u
 
+set pastetoggle=<F2>
+
