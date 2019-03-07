@@ -44,3 +44,14 @@ Installs zsh and everything else needed to fully bootstrap my commandline enviro
 - zsh themes/plugins
 
 Once installations are complete it will also attempt to copy `.tmux.conf`, `.zshrc` and `.zsh_aliases` into `~`, making a backup if the file already exists.
+
+## TODO
+
+- Fix indentLine in JSON files (concealed chars f'ing it)
+- Make <C-o> toggle NERDTree with current file focused
+- Make <C-a> Toggle NERDTree always at project route
+- Make <C-o> and <C-a> Focus NERDTree if it's already open and it isn't currently focused (instead of closing it)
+- Possible make <C-a> (toggle NERDTree in project root) <C-n> and make <C-n> (toggle relative line numbers) <leader>l or <leader>n
+- Make NERDTree auto-update if project route changes?
+- Make NERDTree auto-focus focused buffer?
+- Make LightLine never truncate mode or pastemode
