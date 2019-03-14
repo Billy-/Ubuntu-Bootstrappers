@@ -46,6 +46,9 @@ set t_Co=256
 syntax on
 colorscheme monokai
 
+hi Conceal ctermfg=02 ctermbg=NONE
+hi xmlTagName ctermfg=197
+
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_auto_colors = 0
 hi IndentGuidesOdd  guibg=grey11 ctermbg=234
