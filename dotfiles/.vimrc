@@ -51,7 +51,7 @@ hi IndentGuidesEven guibg=grey15 ctermbg=235
 
 let g:javascript_plugin_jsdoc = 1
 
-let g:ale_fixers = { 'javascript': ['eslint'], 'json': ['jq'] }
+let g:ale_fixers = { 'javascript': ['eslint'] }
 let g:ale_fix_on_save = 1
 
 " F3 toggles showing invisible characters
