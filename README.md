@@ -47,7 +47,6 @@ Once installations are complete it will also attempt to copy `.tmux.conf`, `.zsh
 
 ## TODO
 
-- Fix indentLine in JSON files (concealed chars f'ing it)
 - Make <C-o> toggle NERDTree with current file focused
 - Make <C-a> Toggle NERDTree always at project route
 - Make <C-o> and <C-a> Focus NERDTree if it's already open and it isn't currently focused (instead of closing it)
