@@ -28,14 +28,17 @@ Plug 'chrisbra/NrrwRgn'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'ajh17/Spacegray.vim', { 'as': 'spacegray' }
 Plug '~/.fzf', { 'as': 'fzf' }
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-gitgutter'
+Plug 'crusoexia/vim-monokai'
 
 call plug#end()
 
-color spacegray
+
+set t_Co=256
+syntax on
+colorscheme monokai
 
 :set autoread
 
