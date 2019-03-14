@@ -5,6 +5,12 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+if has ('autocmd') " Remain compatible with earlier versions
+  augroup vimrc     " Source vim configuration upon save
+    autocmd! BufWritePost ~/.vimrc source ~/.vimrc | echom "Reloaded ~/.vimrc" | redraw
+  augroup END
+endif " has autocmd
+
 let ale_completion_enabled = 1
 
 call plug#begin('~/.vim/plugged')
