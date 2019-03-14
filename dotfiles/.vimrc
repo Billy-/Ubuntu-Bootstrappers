@@ -20,7 +20,7 @@ Plug 'rstacruz/vim-hyperstyle'
 Plug 'w0rp/ale'
 Plug 'elzr/vim-json'
 Plug 'tpope/vim-sleuth'
-Plug 'Yggdroot/indentLine'
+Plug 'nathanaelkane/vim-indent-guides'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'itchyny/lightline.vim'
 Plug 'wesQ3/vim-windowswap'
@@ -39,6 +39,11 @@ call plug#end()
 set t_Co=256
 syntax on
 colorscheme monokai
+
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_auto_colors = 0
+hi IndentGuidesOdd  guibg=grey11 ctermbg=234
+hi IndentGuidesEven guibg=grey15 ctermbg=235
 
 :set autoread
 
