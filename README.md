@@ -47,10 +47,10 @@ Once installations are complete it will also attempt to copy `.tmux.conf`, `.zsh
 
 ## TODO
 
-- Make <C-o> toggle NERDTree with current file focused
-- Make <C-a> Toggle NERDTree always at project route
-- Make <C-o> and <C-a> Focus NERDTree if it's already open and it isn't currently focused (instead of closing it)
-- Possible make <C-a> (toggle NERDTree in project root) <C-n> and make <C-n> (toggle relative line numbers) <leader>l or <leader>n
+- Make `<C-o>` toggle NERDTree with current file focused
+- Make `<C-a>` Toggle NERDTree always at project route
+- Make `<C-o>` and `<C-a>` Focus NERDTree if it's already open and it isn't currently focused (instead of closing it)
+- Possible make `<C-a>` (toggle NERDTree in project root) `<C-n>` and make `<C-n>` (toggle relative line numbers) `<leader>l` or `<leader>n`
 - Make NERDTree auto-update if project route changes?
 - Make NERDTree auto-focus focused buffer?
 - Make LightLine never truncate mode or pastemode
