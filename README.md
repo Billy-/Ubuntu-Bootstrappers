@@ -54,3 +54,5 @@ Once installations are complete it will also attempt to copy `.tmux.conf`, `.zsh
 - Make NERDTree auto-update if project route changes?
 - Make NERDTree auto-focus focused buffer?
 - Make LightLine never truncate mode or pastemode
+- Create a custom patched font where the js concealment for `()` works
+- Autoinstall font to terminal
