@@ -1,6 +1,8 @@
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/bill/.zshrc'
 
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator command_execution_time background_jobs time)
+
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
