@@ -21,6 +21,7 @@ export ZSH=$HOME/.oh-my-zsh
 export TERM="screen-256color"
 export BROWSER=chrome
 export EDITOR=vim
+export COMPOSE_DOCKER_CLI_BUILD=1
 
 DEFAULT_USER=`whoami`
 
