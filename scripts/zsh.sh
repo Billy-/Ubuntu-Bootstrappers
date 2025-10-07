@@ -3,7 +3,7 @@
 # Install dependencies
 echo "Installing dependencies..."
 sudo apt-get update
-sudo apt-get install -y wget curl git zsh fortune cowsay lolcat python python-pip build-essential jq
+sudo apt-get install -y wget curl git zsh fortune cowsay lolcat build-essential pipx jq vim
 
 # Install oh-my-zsh
 if [[ -d ~/.oh-my-zsh ]]; then echo "oh-my-zsh found..."
