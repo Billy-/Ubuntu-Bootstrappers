@@ -48,16 +48,6 @@ else
   sudo apt install -y eza
 fi
 
-# Install howdoi
-if [[ ! -z $(which howdoi) ]]; then echo "howdoi found..."
-else
-  git clone https://github.com/gleitz/howdoi.git
-  cd howdoi
-  sudo python ./setup.py install
-  cd ..
-  sudo rm -rf ./howdoi
-fi
-
 echo "Making ZSH default Shell..."
 sudo chsh -s `which zsh`
 
