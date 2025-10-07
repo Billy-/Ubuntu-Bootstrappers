@@ -6,11 +6,11 @@ alias dcu='docker-compose up'
 alias dcub='docker-compose up --build'
 alias nuke='rac; rai; rav'
 
-alias l="exa -lhg --git --time-style=long-iso --group-directories-first --colour-scale"
+alias l="eza -lhg --git --time-style=long-iso --group-directories-first --colour-scale"
 alias ll="l"
-alias la="exa -lahg --git --time-style=long-iso --group-directories-first --colour-scale"
-alias ld="exa -lhg --git --time-style=long-iso --group-directories-first --colour-scale -T -L=2 -I='node_modules|.git'"
-alias lda="exa -lahg --git --time-style=long-iso --group-directories-first --colour-scale -T -L=2 -I='node_modules|.git'"
+alias la="eza -lahg --git --time-style=long-iso --group-directories-first --colour-scale"
+alias ld="eza -lhg --git --time-style=long-iso --group-directories-first --colour-scale -T -L=2 -I='node_modules|.git'"
+alias lda="eza -lahg --git --time-style=long-iso --group-directories-first --colour-scale -T -L=2 -I='node_modules|.git'"
 
 function _swarm-alias() {
   if [ ! -d $1 ]; then
