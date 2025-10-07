@@ -90,6 +90,8 @@ bindkey -M isearch " " magic-space # normal space during searches
 
 [ -s "$HOME/.zsh_aliases" ] && \. "$HOME/.zsh_aliases"  # Load local aliases
 
+source <(op completion zsh)
+
 # Begin nvm autoload
 autoload -U add-zsh-hook
 
