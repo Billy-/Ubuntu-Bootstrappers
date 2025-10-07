@@ -51,7 +51,7 @@ else
 fi
 
 echo "Making ZSH default Shell..."
-sudo chsh -s `which zsh`
+chsh -s `which zsh`
 
 if [[ -d ~/.oh-my-zsh/custom/themes/powerlevel9k ]]; then echo "powerlevel9k theme found..."
 else
