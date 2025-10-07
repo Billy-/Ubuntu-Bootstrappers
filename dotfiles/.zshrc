@@ -33,6 +33,9 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_MODE='nerdfont-complete'
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
 POWERLEVEL9K_SHORTEN_STRATEGY='truncate_with_package_name'
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir newline vcs)
+POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="↱"
+POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="↳ "
 
 plugins=(alias-tips catimg chucknorris colored-man-pages colorize common-aliases docker docker-compose emoji git heroku httpie jira lol man react-native sudo tmux ubuntu yarn z zsh-syntax-highlighting)
 
