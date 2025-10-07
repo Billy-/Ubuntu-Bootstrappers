@@ -20,7 +20,8 @@ function _swarm-alias() {
     echo "DOCKER_CERT_PATH=$1 DOCKER_HOST=\$(cat $1/host) DOCKER_TLS_VERIFY=1 docker"
   fi
 }
- 
+
+mkdir -p ~/.swarms
 for d in $(find ~/.swarms -mindepth 1 -maxdepth 1 -type d); do
         alias "swarm-$(basename $d)=$(_swarm-alias $d)"
 done
