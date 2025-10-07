@@ -1,9 +1,9 @@
 #!/bin/bash
 
-if [[ -z $NVM_DIR ]]; then
+if [[ -z $(command -v nvm) ]]; then
   # Install nvm
   echo "Installing nvm..."
-  wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 else
   echo "NVM_DIR was found..."
 fi
