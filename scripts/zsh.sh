@@ -59,6 +59,42 @@ else
   sudo git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 fi
 
+# Install NerdFont
+font_name="RobotoMono"
+curl -L \
+  -H "Accept: application/vnd.github.VERSION.raw" \
+  -o "${font_name}NerdFontMono-Regular.ttf" \
+  "https://api.github.com/repos/ryanoasis/nerd-fonts/contents/patched-fonts/${font_name}/Regular/${font_name}NerdFontMono-Regular.ttf\?ref\=master"
+font_path="/usr/share/fonts/${font_name}NerdFont"
+sudo mkdir -p ${font_path}
+sudo mv ${font_name}NerdFontMono-Regular.ttf ${font_path}/${font_name}NerdFontMono-Regular.ttf
+fc-cache -r -v
+dconf dump /org/gnome/terminal/ \
+  | grep -v '^font=' \
+  | { cat; echo "font=\"${font_name} Nerd Font Mono 12\""; } \
+  | grep -v '^use-system-font=' \
+  | { cat; echo 'use-system-font=false'; } \
+  | grep -v '^use-theme-transparency=' \
+  | { cat; echo 'use-theme-transparency=false'; } \
+  | grep -v '^use-transparent-background=' \
+  | { cat; echo 'use-transparent-background=true'; } \
+  | grep -v '^background-transparency-percent=' \
+  | { cat; echo 'background-transparency-percent=40'; } \
+  | grep -v '^background-color=' \
+  | { cat; echo 'background-color=rgb(16,16,16)'; } \
+  | grep -v '^foreground-color=' \
+  | { cat; echo 'foreground-color=rgb(255,255,255)'; } \
+  | grep -v '^use-theme-colors=' \
+  | { cat; echo 'use-theme-colors=false'; } \
+  | dconf load /org/gnome/terminal/
+
+
+mkdir -p ~/.config/Code/User
+mkdir -p ~/.config/Cursor/User
+jq --arg font "$font_name Nerd Font Mono" '.["terminal.integrated.fontFamily"] = $font' dotfiles/settings.json > ~/.config/Code/User/settings.json
+jq --arg font "$font_name Nerd Font Mono" '.["terminal.integrated.fontFamily"] = $font' dotfiles/settings.json > ~/.config/Cursor/User/settings.json
+
+
 if [[ -d ~/.oh-my-zsh/custom/plugins/alias-tips ]]; then echo "alias-tips plugin found..."
 else
   echo "Installing alias-tips plugin..."
