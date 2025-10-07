@@ -37,7 +37,7 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir newline vcs)
 POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="↱"
 POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="↳ "
 
-plugins=(alias-tips catimg chucknorris colored-man-pages colorize common-aliases docker docker-compose emoji git heroku httpie jira lol man react-native sudo tmux ubuntu yarn z zsh-syntax-highlighting)
+plugins=(alias-tips catimg chucknorris colored-man-pages colorize common-aliases docker docker-compose emoji git heroku httpie jira lol man react-native sudo tmux ubuntu z zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
