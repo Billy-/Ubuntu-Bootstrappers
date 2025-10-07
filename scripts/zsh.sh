@@ -16,7 +16,9 @@ fi
 if [[ ! -z $(which tmux) ]]; then echo "tmux found..."
 else
   echo "Installing tmux..."
-  wget https://gist.githubusercontent.com/Billy-/b99ac62003e9db8617f3ce969368ce2a/raw/7f22dae6b8a2223c1026e4f0ef5d030b029c7493/tmux_build_from_source_Ubuntu.sh -O - | zsh
+  sudo apt-get install -y tmux
+  sudo gem install tmuxinator
+  sudo wget https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.zsh -O /usr/local/share/zsh/site-functions/_tmuxinator  
 fi
 
 # Install fzf
